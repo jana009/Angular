@@ -1,0 +1,12 @@
+/* app-success-alert{
+    background-color: green;
+} */
+/* app-warning-alert{
+    background-color: red;
+} */
+button.success{
+    background-color: green;
+}
+button.warning{
+    background-color: red;
+}
