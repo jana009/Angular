@@ -2,8 +2,8 @@
   <div class="row">
     <h3>App Component</h3>
   </div>
-  <button class="warning"><app-warning-alert></app-warning-alert></button>
-  <button class="success"><app-success-alert></app-success-alert></button>
+  <button class="warning btn " [disabled]="!allowAppWarning" (click)="onClickAddServer()"><app-warning-alert></app-warning-alert></button>
+  <button class="success btn"><app-success-alert></app-success-alert></button>
 </div>
 
 
