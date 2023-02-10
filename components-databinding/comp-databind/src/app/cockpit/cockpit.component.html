@@ -1,0 +1,13 @@
+<div class="container">
+    <fieldset class="form-container">
+        <form>
+          <label for="servername">Server Name</label>
+          <input type="text" id="servername" name="serverName" [(ngModel)]="newserverName">
+          <label for="servercontent">Server Content</label>
+          <input type="text" id="servercontent" name="servercontent" [(ngModel)]="newserverContent">
+          <br>
+          <button type="submit" (click)="onAddserver()">Add server</button>
+          <button type="submit" (click)="onAddBluePrint()">Add Blueprint</button>
+        </form>
+      </fieldset>
+</div>

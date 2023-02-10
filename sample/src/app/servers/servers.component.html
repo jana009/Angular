@@ -1,0 +1,7 @@
+<p>servers works!</p>
+<input type="text" class="form-controls" [(ngModel)]="serverName">
+<p *ngIf="serverCheck; else noServerStatus" [ngClass]="{success:serverStatus}">{{serverStatus}}</p>
+<ng-template #noServerStatus>
+    <p [ngStyle]="{backgroundColor: 'red'}">No Server!</p>
+</ng-template>
+<button class="btn btn-primary" (click)="onServerClick()">Add Server</button>

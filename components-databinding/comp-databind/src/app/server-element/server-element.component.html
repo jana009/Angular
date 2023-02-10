@@ -1,0 +1,12 @@
+<div class="display-content">
+    <div>
+       <div class="heading">{{element.name}}</div>
+       <div class="content">
+        <p>
+          <strong *ngIf="element.type==='Server'" style="color:rebeccapurple">{{element.content}}</strong>
+          <em *ngIf="element.type === 'Blueprint'" style="color:black">{{element.content}}</em>
+        </p>
+       </div>
+    </div>
+
+  </div>
