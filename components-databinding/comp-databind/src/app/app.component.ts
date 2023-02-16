@@ -7,22 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'comp-databind';
-  newserverName='';
-  newserverContent='';
-  serversElement:{type:string,name:string,content:string}[]=[];
-  onAddserver(){
+  serversElement:{type:string,name:string,content:string}[]=[{type:"Server",name:"test server",content:"check values"}];
+
+  onServerAdded(eventData:{serverName:string,serverContent:string}){
     this.serversElement.push({
       type:"Server",
-      name:this.newserverName,
-      content:this.newserverContent
+      name:eventData.serverName,
+      content:eventData.serverContent
     });
 
   }
-  onAddBluePrint(){
+  onBluePrintAdded(eventData:{serverName:string,serverContent:string}){
     this.serversElement.push({
       type:"Blueprint",
-      name:this.newserverName,
-      content:this.newserverContent
+      name:eventData.serverName,
+      content:eventData.serverContent
     });
   }
 }
