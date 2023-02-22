@@ -11,12 +11,13 @@ export class CockpitComponent {
   newserverName='';
   newserverContent='';
 
-  onAddserver(){
-    this.serverCreated.emit({serverName:this.newserverName,serverContent:this.newserverContent});
+  onAddserver(nameInput:HTMLInputElement,nameContent:HTMLInputElement){
+    this.serverCreated.emit({serverName:nameInput.value,serverContent:nameContent.value});
 
   }
-  onAddBluePrint(){
-    this.bluePrintCreated.emit({serverName:this.newserverName,serverContent:this.newserverContent});
+  onAddBluePrint(nameInput:HTMLInputElement,nameContent:HTMLInputElement){
+    console.log(nameInput.value)
+    this.bluePrintCreated.emit({serverName:nameInput.value,serverContent:nameContent.value});
   }
 
 }

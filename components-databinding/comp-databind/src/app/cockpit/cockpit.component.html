@@ -2,12 +2,13 @@
     <fieldset class="form-container">
         <form>
           <label for="servername">Server Name</label>
-          <input type="text" id="servername" name="serverName" [(ngModel)]="newserverName">
+          <!-- <input type="text" id="servername" name="serverName" [(ngModel)]="newserverName"> -->
+          <input type="text" id="servername" name="serverName" #serverName>
           <label for="servercontent">Server Content</label>
-          <input type="text" id="servercontent" name="servercontent" [(ngModel)]="newserverContent">
+          <input type="text" id="servercontent" name="servercontent" #serverNameContent>
           <br>
-          <button type="submit" (click)="onAddserver()">Add server</button>
-          <button type="submit" (click)="onAddBluePrint()">Add Blueprint</button>
+          <button type="submit" (click)="onAddserver(serverName,serverNameContent)">Add server</button>
+          <button type="submit" (click)="onAddBluePrint(serverName,serverNameContent)">Add Blueprint</button>
         </form>
       </fieldset>
 </div>
